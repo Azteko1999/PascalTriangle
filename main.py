@@ -7,7 +7,7 @@ def printPascal(n) :
         # Every line has number of  
         # integers equal to line 
         # number 
-        for i in range(0, line + 1) : 
+        for i in range(0, line) : 
             print(binomialCoeff(line, i), 
                 " ", end = "") 
         print() 
@@ -17,7 +17,7 @@ def printPascal(n) :
 # for details of this function 
 def binomialCoeff(n, k) : 
     res = 1
-    if (k < n - k) : 
+    if (k > n - k) : 
         k = n - k 
     for i in range(0 , k) : 
         res = res * (n - i) 
